@@ -1,7 +1,6 @@
 package iscsi
 
 import (
-	"connector"
 	"errors"
 	"fmt"
 	"math"
@@ -9,8 +8,10 @@ import (
 	"strings"
 	"sync"
 	"time"
-	"utils"
-	"utils/log"
+
+	"github.com/Huawei/eSDK_K8S_Plugin/src/connector"
+	"github.com/Huawei/eSDK_K8S_Plugin/src/utils"
+	"github.com/Huawei/eSDK_K8S_Plugin/src/utils/log"
 )
 
 type connectorInfo struct {
@@ -216,6 +217,7 @@ func findEachMultiPath(lenIndex int, iscsiShareData *shareData, conn *connectorI
 func findTgtMultiPath(lenIndex int, iscsiShareData *shareData, conn *connectorInfo) string {
 	var wwnAdded bool
 	var lastTryOn int64
+
 	err := utils.WaitUntil(func() (bool, error) {
 		mPath, finished := findEachMultiPath(lenIndex, iscsiShareData, conn)
 		if finished {

@@ -13,10 +13,10 @@ import (
 	"strconv"
 	"sync"
 	"time"
-	"utils"
-	"utils/log"
-
 	fusionURL "net/url"
+
+	"github.com/Huawei/eSDK_K8S_Plugin/src/utils"
+	"github.com/Huawei/eSDK_K8S_Plugin/src/utils/log"
 )
 
 const (

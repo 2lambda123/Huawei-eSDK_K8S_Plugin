@@ -1,13 +1,14 @@
 package backend
 
 import (
-	"csi/backend/plugin"
 	"errors"
 	"fmt"
 	"regexp"
 	"sync"
-	"utils"
-	"utils/log"
+
+	"github.com/Huawei/eSDK_K8S_Plugin/src/csi/backend/plugin"
+	"github.com/Huawei/eSDK_K8S_Plugin/src/utils"
+	"github.com/Huawei/eSDK_K8S_Plugin/src/utils/log"
 )
 
 var (
